@@ -1,6 +1,4 @@
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config()
-}
+require('dotenv').config()
 
 const express = require('express')
 const app = express()
@@ -11,15 +9,9 @@ const session = require('express-session')
 const methodOverride = require('method-override')
 
 app.use(express.static('public'))
-
 const initializePassport = require('./passport-config')
-initializePassport(
-  passport,
-  email => users.find(user => user.email === email),
-  id => users.find(user => user.id === id)
-)
+ initializePassport(passport)
 
-const users = [{"id":"1","name":"Saide","email":"saide@example.com","password":"$2b$10$C67cmAnl1dMI6xnHdOyN8uXSvrq/N/CVZrbBNxfubmSHG0025aFPW"}]
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
@@ -47,24 +39,6 @@ app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
   failureFlash: true
 }))
 
-/*app.get('/register', checkNotAuthenticated, (req, res) => {
-  res.render('register.ejs')
-})
-
-app.post('/register', checkNotAuthenticated, async (req, res) => {
-  try {
-    const hashedPassword = await bcrypt.hash(req.body.password, 10)
-    users.push({
-      id: Date.now().toString(),
-      name: req.body.name,
-      email: req.body.email,
-      password: hashedPassword
-    })
-    res.redirect('/login')
-  } catch {
-    res.redirect('/register')
-  }
-})*/
 
 app.delete('/logout', (req, res) => {
   req.logOut()

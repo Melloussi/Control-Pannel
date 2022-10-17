@@ -7,6 +7,7 @@
 }
 .form {
   position: relative;
+  border-radius: 25px;
   z-index: 1;
   background: #FFFFFF;
   max-width: 360px;
@@ -18,9 +19,11 @@
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #f2f2f2;
+  background: #f0f0f0;
   width: 100%;
   border: 0;
+  border-color: #19657d;
+  border-radius: 10px;
   margin: 0 0 15px;
   padding: 15px;
   box-sizing: border-box;
@@ -30,9 +33,10 @@
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
-  background: #4CAF50;
+  background: #19657d;
   width: 100%;
   border: 0;
+  border-radius: 10px;
   padding: 15px;
   color: #FFFFFF;
   font-size: 14px;
@@ -89,11 +93,11 @@
   color: #EF3B3A;
 }
 body {
-  background: #76b852; /* fallback for old browsers */
-  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-  background: -moz-linear-gradient(right, #76b852, #8DC26F);
-  background: -o-linear-gradient(right, #76b852, #8DC26F);
-  background: linear-gradient(to left, #76b852, #8DC26F);
+  background: #468397; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #468397, #468397);
+  background: -moz-linear-gradient(right, #468397, #468397);
+  background: -o-linear-gradient(right, #468397, #468397);
+  background: linear-gradient(to left, #468397, #468397);
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;      
@@ -105,8 +109,9 @@ h1{
   color: #FFFFFF;
 }
 button {
-  background-color: #256b27; /* Green */
+  background-color: #19657d; /* Green */
   border: none;
+  border-radius: 10px;
   color: white;
   padding: 15px 32px;
   text-align: center;
