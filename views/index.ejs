@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,5 +14,106 @@
     <button type="submit">Log Out</button>
   </form>
 
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="./dashboard-style.css">
+  <script src="https://kit.fontawesome.com/4a6afeb22f.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="javascript: document.logoutForm.submit()"><i id="navbar-icons" class="fa-solid fa-right-from-bracket"></i><strong>تسجيل الخروج</strong></a>
+  </div>
+
+
+<div class="grid">
+ 
+
+  <div class="grid__item">
+    <div class="card">
+      <div class="card__cover"><i id="cards_icons" class="fa-solid fa-tv"></i>  </div>
+    
+      <div class="card__content">
+        <!--<h1 class="card__header" >إدارة القنوات</h1>-->
+        <center> <button class="card__btn">القنوات</button> </center>
+      </div>
+    </div>
+  </div>
+  <div class="grid__item">
+    <div class="card">
+      <div class="card__cover"><i id="cards_icons" class="fa-solid fa-layer-group"></i>  </div>
+    
+      <div class="card__content">
+        <!-- <h1 class="card__header">    إدارة الباقات  /h1> -->
+        <center> <button class="card__btn">الباقات</button> </center>
+      </div>
+    </div>
+  </div>
+  <div class="grid__item">
+    <div class="card">
+      <div class="card__cover"><i id="cards_icons" class="fa-solid fa-futbol"></i>  </div>
+    
+      <div class="card__content">
+        <!-- <h1 class="card__header">اضافة المباريات</h1> -->
+        <center> <button class="card__btn">المباريات</button> </center>
+      </div>
+    </div>
+  </div>
+  <div class="grid__item">
+    <div class="card">
+      <div class="card__cover"><i id="cards_icons" class="fa-solid fa-network-wired"></i>  </div>
+    
+      <div class="card__content">
+        <!-- <h1 class="card__header">مجموعة الفئات</h1> -->
+        <center> <button class="card__btn">مجموعة الفئات</button> </center>
+      </div>
+    </div>
+  </div>
+  <div class="grid__item">
+    <div class="card">
+      <div class="card__cover"><i id="cards_icons" class="fa-solid fa-sliders"></i>  </div>
+    
+      <div class="card__content">
+        <!-- <h1 class="card__header">الاعدادات</h1> -->
+        <center> <button class="card__btn">الاعدادات</button> </center>
+      </div>
+    </div>
+  </div>
+  <div class="grid__item">
+    <div class="card">
+      <div class="card__cover"><i id="cards_icons" class="fa-solid fa-bell"></i>  </div>
+    
+      <div class="card__content">
+        <!-- <h1 class="card__header">الاشعارات</h1> -->
+        <center> <button class="card__btn">الاشعارات</button> </center>
+      </div>
+    </div>
+  </div>
+  <div class="grid__item">
+    <div class="card">
+      <div class="card__cover"><i id="cards_icons" class="fa-solid fa-rectangle-ad"></i>  </div>
+    
+      <div class="card__content">
+        <!-- <h1 class="card__header">ضبط الاعلانات</h1> -->
+        <center> <button class="card__btn">ضبط الاعلانات</button> </center>
+      </div>
+    </div>
+  </div>
+
+  
+  
+</div>
+
+<form name="logoutForm" action="/logout?_method=DELETE" method="POST" hidden="true">
+  <button hidden type="submit" value="Logout"/>
+</form>
+  
 </body>
 </html>
